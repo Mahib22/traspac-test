@@ -15,6 +15,11 @@ class ListPegawais extends ListRecords
     {
         return [
             Actions\CreateAction::make()->label('Add Pegawai'),
+            Actions\Action::make('pdf')
+                ->label('Export')
+                ->color('success')
+                ->url(route('export-pegawai'))
+                ->openUrlInNewTab(),
         ];
     }
 }
