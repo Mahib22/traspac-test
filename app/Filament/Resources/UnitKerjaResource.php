@@ -42,6 +42,8 @@ class UnitKerjaResource extends Resource
                     ->sortable()
             ])
             ->actions([
+                Tables\Actions\ViewAction::make()
+                    ->label('Lihat Pegawai'),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ]);
@@ -51,6 +53,7 @@ class UnitKerjaResource extends Resource
     {
         return [
             'index' => Pages\ListUnitKerjas::route('/'),
+            'view' => Pages\ViewUnitKerjas::route('/{record}'),
         ];
     }
 }

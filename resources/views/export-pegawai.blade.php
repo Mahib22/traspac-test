@@ -1,5 +1,10 @@
+<center>
+    <h1>Daftar Pegawai</h1>
+    <h2>Dinas Perhubungan Provinsi Jawa Tengah</h2>
+</center>
+
 <table>
-    <thead>
+    <thead style="background-color: blue">
         <tr>
             <th>NIP</th>
             <th>Nama</th>
@@ -7,14 +12,14 @@
             <th>Alamat</th>
             <th>Tanggal Lahir</th>
             <th>Jenis Kelamin</th>
+            <th>Golongan</th>
             <th>Eselon</th>
+            <th>Jabatan</th>
             <th>Tempat Tugas</th>
             <th>Agama</th>
+            <th>Unit Kerja</th>
             <th>No HP</th>
             <th>NPWP</th>
-            <th>Golongan</th>
-            <th>Jabatan</th>
-            <th>Unit Kerja</th>
         </tr>
     </thead>
     <tbody>
@@ -26,14 +31,14 @@
                 <td>{{ $item->alamat }}</td>
                 <td>{{ $item->tgl_lahir }}</td>
                 <td>{{ $item->jenis_kelamin }}</td>
+                <td>{{ $item->golongan->name }}</td>
                 <td>{{ $item->eselon }}</td>
+                <td>{{ $item->jabatan->name }}</td>
                 <td>{{ $item->tempat_tugas }}</td>
                 <td>{{ $item->agama }}</td>
+                <td>{{ $item->unitKerja->name }}</td>
                 <td>{{ $item->no_hp }}</td>
                 <td>{{ $item->npwp }}</td>
-                <td>{{ $item->golongan->name }}</td>
-                <td>{{ $item->jabatan->name }}</td>
-                <td>{{ $item->unitKerja->name }}</td>
             </tr>
         @endforeach
     </tbody>
