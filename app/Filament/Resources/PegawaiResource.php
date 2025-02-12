@@ -134,8 +134,6 @@ class PegawaiResource extends Resource
             ->defaultSort('created_at', 'desc')
             ->emptyStateHeading('No data found')
             ->columns([
-                ImageColumn::make('foto')
-                    ->circular(),
                 TextColumn::make('nama')
                     ->searchable()
                     ->sortable(),
